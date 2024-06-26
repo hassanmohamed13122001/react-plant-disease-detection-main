@@ -11,7 +11,7 @@ export default function Navigator() {
     return (
         <nav className="flex items-center justify-between flex-wrap bg-green-500 p-3 sticky top-0">
             <div className="flex items-center flex-shrink-0 text-white mr-6">
-                <img src="/images/logo2.png" width={45} className="rounded-full" />
+                <img src="/images/logo.png" width={45} className="rounded-full" />
             </div>
             <div className="block lg:hidden">
                 <button
