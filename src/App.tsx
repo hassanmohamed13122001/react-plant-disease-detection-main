@@ -4,6 +4,8 @@ import Home from "./pages/Home.tsx";
 import UploadPage from "./pages/UploadPage.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import GuidPage from "./pages/GuidPage.tsx";
+import CategoriesPage from "./pages/CategoriesPage.tsx";
+import ProtectedRoute from "./components/ProtectedRoute.tsx";
 
 function App() {
 
@@ -12,8 +14,9 @@ function App() {
         <Navigator/>
         <Routes>
             <Route index element={<Home/>} />
-            <Route path="/upload-image" element={<UploadPage/>} />
+            <Route path="/upload-image" element={<ProtectedRoute><UploadPage/></ProtectedRoute>}  />
             <Route path="/guide" element={<GuidPage/>}/>
+            <Route path="/categories" element={<CategoriesPage/>}/>
             <Route path="*" element={<NotFound/>} />
         </Routes>
     </>

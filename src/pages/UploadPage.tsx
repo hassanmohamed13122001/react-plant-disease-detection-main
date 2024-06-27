@@ -1,7 +1,8 @@
 import axios from "axios";
-import { ChangeEvent, useState } from "react";
+import { ChangeEvent , useState } from "react";
 
 export default function UploadPage() {
+  
   const [selectedFile, setSelectedFile] = useState<{
     img: string;
     file: Blob;
@@ -21,7 +22,7 @@ export default function UploadPage() {
       });
     }
   };
-
+  const thisCategory = localStorage.getItem('category');
   const handleUpload = async () => {
     if (!selectedFile) {
       alert("Please select a file.");
@@ -32,10 +33,10 @@ export default function UploadPage() {
 
     const formData = new FormData();
     formData.append("file", selectedFile.file);
-
+    const category = localStorage.getItem('category')
     try {
       const response = await axios.post(
-        "https://ahmedmsaber.pythonanywhere.com/predict",
+        `https://ahmedsaber-plants-leafs.hf.space/predict/${category}`,
         formData,
         {
           headers: {
@@ -44,6 +45,7 @@ export default function UploadPage() {
         }
       );
       setResult(response.data);
+      localStorage.removeItem('category');
     } catch (error) {
       console.error("Error uploading file:", error);
     }
@@ -53,7 +55,7 @@ export default function UploadPage() {
 
   return (
     <div className="py-20 bg-gray-100 text-center">
-      <h2 className="text-3xl font-bold mb-4">Plant Disease Detection</h2>
+      <h2 className="text-3xl font-bold mb-4">Plant Disease Detection for <span style={{color:'#22C55E'}} > {thisCategory?thisCategory:''}</span></h2>
       <form>
         <input
           type="file"

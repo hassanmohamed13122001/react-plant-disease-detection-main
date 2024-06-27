@@ -51,8 +51,14 @@ export default function Navigator() {
                     >
                         Guide
                     </NavLink>
+                    <NavLink
+                        to="/categories"
+                        className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-gray-200 mr-4"
+                    >
+                        Categories
+                    </NavLink>
                 </div>
             </div>
         </nav>
     );
-};
+}
