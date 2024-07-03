@@ -1,5 +1,6 @@
 import axios from "axios";
 import { ChangeEvent , useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function UploadPage() {
   
@@ -23,6 +24,7 @@ export default function UploadPage() {
     confidence: number;
     predicted_class:string;
   } | null>(null);
+  const [errorMsg, seterrorMsg] = useState<boolean>(false);
 
   const handleFileChange = (event: ChangeEvent<HTMLInputElement>) => {
     if (event.target.files && event.target.files[0]) {
@@ -55,11 +57,19 @@ export default function UploadPage() {
         }
       );
       console.log(response.data);
+      if (response.data?.message === "Predicted class is not allowed for this plant."){
+        seterrorMsg(true);
+        setResult(null);
+      }else{
+        setResult(response.data);
+        // localStorage.removeItem('category');
+        seterrorMsg(false);
+      }
       
-      setResult(response.data);
-      localStorage.removeItem('category');
     } catch (error) {
       console.error("Error uploading file:", error);
+      setResult(null);
+      seterrorMsg(true);
     }
 
     setLoading(false);
@@ -137,6 +147,12 @@ export default function UploadPage() {
           </dl>
         </div>
       </div>
+      )}
+
+      {errorMsg && (
+        <div  style={{boxShadow:'0px 0px 15px rgba(0, 0, 0,0.5)' , backgroundColor:'rgb(255 , 50 , 50)' , width:'90%' , margin:'auto' , borderRadius:'18px' , padding:'18px' , fontSize:'24px'}}>
+            <p>this plant is not in this category please Choose another one ! <Link style={{color:'#22C55E' , fontWeight:'700'}} to={'/categories'}>go to categories</Link></p>
+        </div>
       )}
     </div>
   );
