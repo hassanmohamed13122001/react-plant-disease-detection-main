@@ -6,35 +6,35 @@ export default function GuidPage() {
             title: "Early blight (اللفحة المبكرة)",
             description:
                 "اللفحة المبكرة هي مرض فطري شائع يصيب الطماطم والنباتات الأخرى في عائلة الباذنجانيات. يحدث هذا المرض بسبب فطر Alternaria solani ويظهر عادةً على شكل بقع صغيرة داكنة على الأوراق السفلية للنباتات.",
-            image: "/public/images/Early_blight.jpg",
+            image: "/images/Early_blight.jpg",
         },
         {
             title: "Late blight (اللفحة المتأخرة)",
             description:
                 "اللفحة المتأخرة هي مرض نباتي مدمر يصيب أفراد عائلة الباذنجانيات، وخاصة الطماطم والبطاطس. وينتج عن مسببات أمراض الفطريات البيضية، وهو نوع من العفن المائي وليس فطرًا حقيقيًا.",
-            image: "/public/images/late_blight.jpg",
+            image: "/images/late_blight.jpg",
         }, {
             title: "Target Spot (البقعة المستهدفة)",
             description:
                 "هي مرض فطري يصيب مجموعة متنوعة من المحاصيل، بما في ذلك الطماطم والفول السوداني والنباتات الأخرى. يسببه فطر Corynespora cassiicola.",
-            image: "/public/images/target_spot.jpg",
+            image: "/images/target_spot.jpg",
         },
         {
             title: "Septoria leaf spot",
             description:
                 "هو مرض شائع ومدمر يصيب نباتات الطماطم وأحياناً محاصيل أخرى من الفصيلة الباذنجانية تظهر بقع دائرية صغيرة ذات مراكز داكنة وهوامش فاتحة بشكل أساسي على الأوراق السفلية.",
-            image: "/public/images/Septoria_leaf_spot.jpg",
+            image: "/images/Septoria_leaf_spot.jpg",
         }, {
             title: "Northern Leaf Blight",
             description:
                 "هو مرض ورقي كبير يصيب نباتات الذرة يظهر مرض لفحة الأوراق الشمالية في البداية على شكل آفات صغيرة بيضاوية الشكل على أوراق الذرة، والتي تكون في البداية بنية أو أسمر اللون ومحاطة بهالات صفراء.",
-            image: "/public/images/Northern_Leaf_Blight.jpg",
+            image: "/images/Northern_Leaf_Blight.jpg",
         },
         {
             title: "Grape Black rot",
             description:
                 "العفن الأسود هو مرض فطري مدمر يصيب العنب خاصة في المناطق ذات المناخ الدافئ والرطب. ويسببه فطر غينارديا بيدويلي",
-            image: "/public/images/download.jpg",
+            image: "/images/download.jpg",
         },
         // Add more diseases as needed
     ];
