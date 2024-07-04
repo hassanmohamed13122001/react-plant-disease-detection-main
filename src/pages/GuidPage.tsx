@@ -3,38 +3,38 @@ import PlantDiseaseCard from "../components/PlantDiseaseCard.tsx";
 export default function GuidPage() {
     const commonDiseases = [
         {
-            title: "Powdery Mildew",
+            title: "Early blight (اللفحة المبكرة)",
             description:
-                "Powdery mildew is a fungal disease that affects a wide range of plants. It appears as a white powdery substance on the leaves and stems of plants.",
-            image: "path/to/powdery_mildew.jpg",
+                "اللفحة المبكرة هي مرض فطري شائع يصيب الطماطم والنباتات الأخرى في عائلة الباذنجانيات. يحدث هذا المرض بسبب فطر Alternaria solani ويظهر عادةً على شكل بقع صغيرة داكنة على الأوراق السفلية للنباتات.",
+            image: "/public/images/Early_blight.jpg",
         },
         {
-            title: "Leaf Spot",
+            title: "Late blight (اللفحة المتأخرة)",
             description:
-                "Leaf spot is a common fungal disease characterized by dark spots on the leaves of plants. It can lead to defoliation and weaken the plant.",
-            image: "/images/Leaf_Spot.jpg",
+                "اللفحة المتأخرة هي مرض نباتي مدمر يصيب أفراد عائلة الباذنجانيات، وخاصة الطماطم والبطاطس. وينتج عن مسببات أمراض الفطريات البيضية، وهو نوع من العفن المائي وليس فطرًا حقيقيًا.",
+            image: "/public/images/late_blight.jpg",
         }, {
-            title: "Powdery Mildew",
+            title: "Target Spot (البقعة المستهدفة)",
             description:
-                "Powdery mildew is a fungal disease that affects a wide range of plants. It appears as a white powdery substance on the leaves and stems of plants.",
-            image: "path/to/powdery_mildew.jpg",
+                "هي مرض فطري يصيب مجموعة متنوعة من المحاصيل، بما في ذلك الطماطم والفول السوداني والنباتات الأخرى. يسببه فطر Corynespora cassiicola.",
+            image: "/public/images/target_spot.jpg",
         },
         {
-            title: "Leaf Spot",
+            title: "Septoria leaf spot",
             description:
-                "Leaf spot is a common fungal disease characterized by dark spots on the leaves of plants. It can lead to defoliation and weaken the plant.",
-            image: "path/to/leaf_spot.jpg",
+                "هو مرض شائع ومدمر يصيب نباتات الطماطم وأحياناً محاصيل أخرى من الفصيلة الباذنجانية تظهر بقع دائرية صغيرة ذات مراكز داكنة وهوامش فاتحة بشكل أساسي على الأوراق السفلية.",
+            image: "/public/images/Septoria_leaf_spot.jpg",
         }, {
-            title: "Powdery Mildew",
+            title: "Northern Leaf Blight",
             description:
-                "Powdery mildew is a fungal disease that affects a wide range of plants. It appears as a white powdery substance on the leaves and stems of plants.",
-            image: "path/to/powdery_mildew.jpg",
+                "هو مرض ورقي كبير يصيب نباتات الذرة يظهر مرض لفحة الأوراق الشمالية في البداية على شكل آفات صغيرة بيضاوية الشكل على أوراق الذرة، والتي تكون في البداية بنية أو أسمر اللون ومحاطة بهالات صفراء.",
+            image: "/public/images/Northern_Leaf_Blight.jpg",
         },
         {
-            title: "Leaf Spot",
+            title: "Grape Black rot",
             description:
-                "Leaf spot is a common fungal disease characterized by dark spots on the leaves of plants. It can lead to defoliation and weaken the plant.",
-            image: "path/to/leaf_spot.jpg",
+                "العفن الأسود هو مرض فطري مدمر يصيب العنب خاصة في المناطق ذات المناخ الدافئ والرطب. ويسببه فطر غينارديا بيدويلي",
+            image: "/public/images/download.jpg",
         },
         // Add more diseases as needed
     ];
